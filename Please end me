@@ -1,0 +1,42 @@
+var bark = new Color (94, 60, 38);
+var green = new Color (44, 92, 57);
+
+function start(){
+    tree();
+}
+
+function tree(){
+    trunk();
+    leaves();
+}
+
+function trunk(){
+    var stem = new Polygon();
+    stem.addPoint(180,480);
+    stem.addPoint(250,480);
+    stem.addPoint(280,150);
+    stem.addPoint(230,150);
+    stem.setColor(bark);
+    add(stem);
+}
+
+function leaves(){
+    var leaf = new Oval(225,60);
+    leaf.setPosition(150,150);
+    leaf.setColor(green);
+    add(leaf);
+    var leafa = new Oval(225,60);
+    leafa.setPosition(175,80);
+    leafa.setColor(green);
+    leafa.rotate(35);
+    add(leafa);
+    var leafb = new Oval (225,60);
+    leafb.setPosition(350,150);
+    leafb.setColor(green);
+    add(leafb);
+    var leafc = new Oval (225,60);
+    leafc.setPosition(320,80);
+    leafc.rotate(320);
+    leafc.setColor(green);
+    add(leafc);
+}
